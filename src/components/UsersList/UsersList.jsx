@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./UsersList.module.css";
 import users from "./users";
+import defaultStopgap from'./defaultStopgap.jpg'
 
-const stopgap =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnnbTIIFSI_Cynlk5j4uD0tOdfr1p2k2-niA&s";
+  
 
 class UsersList extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class UsersList extends React.Component {
   }
 
   defaultStopgap = (e) => {
-    return (e.target.src = stopgap );
+    return (e.target.src = defaultStopgap );
   };
 
   render() {
@@ -27,7 +27,7 @@ class UsersList extends React.Component {
             <article key={id} className={styles.userCard}>
               <img
                 onError={this.defaultStopgap}
-                src={profilePicture ? profilePicture : stopgap}
+                src={profilePicture ? profilePicture : defaultStopgap}
                 alt="Photo-User"
                 className={styles.userImg}
               />
