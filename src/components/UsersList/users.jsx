@@ -46,10 +46,9 @@
     },
     {
       id: 999,
-      firstName: "Anonym",
-      lastName: "Anonym",
-      profilePicture:
-        "https://m.media-amazon.com/images/M/MV5BMTM3OTUwMDYwNl5BMl5BanBnXkFtZTcwTUyNzc3Nw@@._V1_.jpg",
+      firstName: "Anonymus",
+      lastName: "Anonymus",
+      profilePicture: undefined,
       contacts: [
         "https://twitter.com/realjstatham",
         "https://www.instagram.com/therock/?hl=ru",
@@ -72,8 +71,7 @@
       id: 7,
       firstName: "Daniel",
       lastName: "Day-Lewis",
-      profilePicture:
-        "https://i2.wp.com/comicbookdebate.com/wp-content/uploads/2019/07/There20will20be20blood202-750x460.jpg?resize=750%2C460&ssl=1",
+      profilePicture:undefined,
       contacts: [
         "https://www.facebook.com/DanielDayLewis/",
         "https://twitter.com/DanielDayLewis",

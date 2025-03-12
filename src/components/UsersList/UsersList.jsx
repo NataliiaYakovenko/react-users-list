@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./UsersList.module.css";
 import users from "./users";
 
+const stopgap =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnnbTIIFSI_Cynlk5j4uD0tOdfr1p2k2-niA&s";
+
 class UsersList extends React.Component {
   constructor(props) {
     super(props);
@@ -11,17 +14,21 @@ class UsersList extends React.Component {
     };
   }
 
+  defaultStopgap = (e) => {
+    return (e.target.src = stopgap );
+  };
+
   render() {
-    
     return (
       <div className={styles.container}>
         {this.state.users.map((user) => {
-        const { id, firstName, lastName, profilePicture, contacts } = user;
+          const { id, firstName, lastName, profilePicture, contacts } = user;
           return (
             <article key={id} className={styles.userCard}>
               <img
-                src={profilePicture}
-                alt="photoUser"
+                onError={this.defaultStopgap}
+                src={profilePicture ? profilePicture : stopgap}
+                alt="Photo-User"
                 className={styles.userImg}
               />
               <h1>
