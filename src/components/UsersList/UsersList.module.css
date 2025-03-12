@@ -38,6 +38,11 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+.userName{
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .contacts {
   word-break: break-all;
   line-height: 2.5;
