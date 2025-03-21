@@ -1,4 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  transition: background-image 0.5s ease-in;
+}
+
+.bgHidden {
+  background-image: none;
+}
+
+.bgVisible {
   background-image: url("https://variety.com/wp-content/uploads/2020/09/hollywood-walk-of-fame.jpg?w=1000&h=563&crop=1");
   background-size: cover;
   background-position: center;
@@ -30,15 +44,52 @@ body {
   color: darkslateblue;
 }
 
+.avatarContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.initials {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ddd;
+  color: #555;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
 .userImg {
   width: 150px;
   height: 150px;
+  margin-left: 30px;
   border: 1px solid rgb(158, 157, 157);
   box-shadow: 3px 3px 10px rgba(4, 4, 4, 0.2);
   border-radius: 50%;
   object-fit: cover;
+  position: absolute;
+  transition: opacity 0.3s ease;
 }
-.userName{
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.userName {
   font-size: 25px;
   font-weight: bold;
 }
